@@ -44,6 +44,8 @@ public interface ProductRepository extends JpaRepository<Product, Integer> {
 	
 	List<Product> findByCategory(String category);
 	
+	Product findByName(String name);
+	
 	@Query(value = "select sum(price) from product_details", nativeQuery = true)
 	Float findTotalPriceOfAllProducts();
 	

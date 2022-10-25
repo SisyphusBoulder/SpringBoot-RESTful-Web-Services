@@ -28,6 +28,14 @@ import lombok.ToString;
 @Table(name = "product_details")
 public class Product {
 
+	//Constructor for testing
+	public Product(int id, String name, float price, String category) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+		this.category = category;
+	}
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
